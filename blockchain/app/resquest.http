@@ -1,0 +1,15 @@
+POST http://192.168.103.100:3000/intialize-data
+Content-Type: application/json
+
+{
+  "passportNumber": "123",
+  "surname": "Doe",
+  "givenNames": "John",
+  "nationality": "US",
+  "sex": "M",
+  "dateOfBirth": "01-01-1990",
+  "dateOfIssue": "01-01-2024",
+  "dateOfExpiry": "01-01-2030"
+}
+###
+GET http://192.168.103.100:3000/test

@@ -1,0 +1,199 @@
+{
+  "address": "4Z4fnLEkQ1FkzGxjfGDKR5AKAQQAHqBf53BZJ1bfV2XC",
+  "metadata": {
+    "name": "certificate_vault",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "get_all_data",
+      "discriminator": [
+        123,
+        176,
+        254,
+        135,
+        24,
+        71,
+        65,
+        169
+      ],
+      "accounts": [
+        {
+          "name": "passport_data",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "get_id",
+      "discriminator": [
+        176,
+        193,
+        97,
+        9,
+        60,
+        181,
+        41,
+        130
+      ],
+      "accounts": [
+        {
+          "name": "passport_data",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "passport_number",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "passport_data",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "passport_number",
+          "type": "string"
+        },
+        {
+          "name": "surname",
+          "type": "string"
+        },
+        {
+          "name": "given_names",
+          "type": "string"
+        },
+        {
+          "name": "nationality",
+          "type": "string"
+        },
+        {
+          "name": "sex",
+          "type": "string"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "string"
+        },
+        {
+          "name": "date_of_issue",
+          "type": "string"
+        },
+        {
+          "name": "date_of_expiry",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "PassportData",
+      "discriminator": [
+        170,
+        47,
+        123,
+        204,
+        13,
+        253,
+        244,
+        33
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NotFound",
+      "msg": "Given Id not Found"
+    }
+  ],
+  "types": [
+    {
+      "name": "PassportData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "author",
+            "type": "pubkey"
+          },
+          {
+            "name": "passport_number",
+            "type": "string"
+          },
+          {
+            "name": "surname",
+            "type": "string"
+          },
+          {
+            "name": "given_names",
+            "type": "string"
+          },
+          {
+            "name": "nationality",
+            "type": "string"
+          },
+          {
+            "name": "sex",
+            "type": "string"
+          },
+          {
+            "name": "date_of_birth",
+            "type": "string"
+          },
+          {
+            "name": "date_of_issue",
+            "type": "string"
+          },
+          {
+            "name": "date_of_expiry",
+            "type": "string"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ]
+}
